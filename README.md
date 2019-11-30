@@ -1,2 +1,2 @@
 # CppND-Capstone-CV-FastObjectDetection
-Computer Vision: Fast Object Detection with Deep Learning YOLOv3 using OpenCV
+Computer Vision: Deep Learning based Fast Object Detection with using YOLOv3 with OpenCV backend
