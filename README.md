@@ -57,5 +57,5 @@ This is an inference focused Fast Object Detection Application which uses latest
   a. The project makes use of references in function declarations: All 3 helper functions called from main uses pass by reference effectively to create post-processed frames  
     
 ## References
-learnopencv.com
-pixabay.com
+* learnopencv.com
+* pixabay.com
