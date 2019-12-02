@@ -41,3 +41,6 @@ This is an inference focused Fast Object Detection Application which uses latest
 ## Test Instructions
 1. Run on image: `./yolov3_object_detect --image=../data/hotdogFork.jpg`. Apart from displaying the result, a new output file `../data/hotdogFork_out.jpg` is created with objects detected by a bounding box and a probability match with the class detected
 2. Run on video: `./yolov3_object_detect --video=../data/NYC_Junction.mp4`. Apart from displaying results, a new ouput file `../data/NYC_Junction_out.avi` is created with objects detected by a bounding box and a probability match with the class detected
+
+## References
+https://www.learnopencv.com/ 
