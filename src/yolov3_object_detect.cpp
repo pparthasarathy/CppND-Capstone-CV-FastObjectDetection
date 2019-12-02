@@ -140,8 +140,8 @@ int main(int argc, char** argv)
         vector<double> layersTimes;
         double freq = getTickFrequency() / 1000;
         double t = net.getPerfProfile(layersTimes) / freq;
-        string label = format("Inference time: %.2f ms", t);
-        putText(frame, label, Point(0, 15), FONT_HERSHEY_SIMPLEX, 0.5, Scalar(0, 0, 255));
+        string label = format("Frame Process Time: %.2f ms", t);
+        putText(frame, label, Point(0, 15), CV_FONT_HERSHEY_SIMPLEX, 0.5, Scalar(150, 0, 150));
         
         // Write the frame with the detection boxes
         Mat detectedFrame;

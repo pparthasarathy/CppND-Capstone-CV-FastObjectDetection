@@ -4,7 +4,7 @@ Computer Vision: Deep Learning based Fast Object Detection using YOLOv3 with Ope
 ## Results of Running on Image and Video Files
 Image Output             |  Video Output
 :-------------------------:|:-------------------------:
-![Image Output](data/hotdogFork_output.jpg)  |  ![Video Output](data/NYC_Junction_output.gif)
+![Image Output](data/hotdogFork_output.jpg width = 400 height = 300)  |  ![Video Output](data/NYC_Junction_output.gif)
 
 ## Dependencies for Running Locally
 * cmake >= 3.11.3
@@ -26,7 +26,7 @@ Image Output             |  Video Output
   * Windows: recommend using [MinGW](http://www.mingw.org/)
 * Get YOLOv3 Object Detection Model
   * Use getYOLOv3.sh script with commands: `sudo chmod a+x getYOLOv3.sh` and `./getYOLOv3.sh`
-  * This gets the model with pre-trained weights, configuration data, and class names
+  * This gets the model with pre-trained weights, configuration data, and class names and saves them into the `data` folder
 
 ## Basic Build Instructions
 1. Clone this repo.
