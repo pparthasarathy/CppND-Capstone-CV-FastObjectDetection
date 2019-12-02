@@ -1,7 +1,7 @@
 # CppND-Capstone-CV-FastObjectDetection
 Computer Vision: Deep Learning based Fast Object Detection using YOLOv3 with OpenCV backend
 ## Description
-This is an inference focused Fast Object Detection Application which uses latest version YOLOv3 (You Only Look Once) deep learning based algorithm. The published model can detect 80 images and is super fast even on a CPU when used with OpenCV as backend
+This is an inference focused Fast Object Detection Application which uses latest version YOLOv3 (You Only Look Once) deep learning based algorithm. The published model can detect 80 images and is super fast even on a CPU when used with OpenCV as backend. This was chosen to further my interest in learning computer vision concepts and applications.
 
 ## Results of Running on Image and Video Files
 <p float="left">
@@ -42,5 +42,19 @@ This is an inference focused Fast Object Detection Application which uses latest
 1. Run on image: `./yolov3_object_detect --image=../data/hotdogFork.jpg`. Apart from displaying the result, a new output file `../data/hotdogFork_out.jpg` is created with objects detected by a bounding box and a probability match with the class detected
 2. Run on video: `./yolov3_object_detect --video=../data/NYC_Junction.mp4`. Apart from displaying results, a new ouput file `../data/NYC_Junction_out.avi` is created with objects detected by a bounding box and a probability match with the class detected
 
+## Rubric Criteria Met
+### 2 Basic/ Mandatory Criteria:
+1. README with Description, Instructions, Motivation, etc.
+2. Compiling and Testing along with set up and test outputs are described in detail
+### 5 Chosen Criteria:
+3. Loops, Functions, I/O:
+  a. The project demonstrates an understanding of C++ functions and control structures: Helper functions and loops are used
+  b. The project reads data from a file and process the data, or the program writes data to a file: Reads data from image or video files and outputs to image or video files respectively
+  c. The project accepts user input and processes the input: Uses input image or video file provided by user as input
+4. Object Oriented Programming:
+  a. Classes encapsulate behavior: Usage of OpenCV classes and their member functions that help encapsulate behavior
+5. Memory Management:
+  a. The project makes use of references in function declarations: All 3 helper functions called from main uses pass by reference effectively to create post-processed frames  
+    
 ## References
-https://www.learnopencv.com/ 
+learnopencv.com
