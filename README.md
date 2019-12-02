@@ -1,5 +1,7 @@
 # CppND-Capstone-CV-FastObjectDetection
 Computer Vision: Deep Learning based Fast Object Detection using YOLOv3 with OpenCV backend
+## Description
+This is an inference focused Fast Object Detection Application which uses latest version YOLOv3 (You Only Look Once) deep learning based algorithm. The published model can detect 80 images and is super fast even on a CPU when used with OpenCV as backend
 
 ## Results of Running on Image and Video Files
 <p float="left">
