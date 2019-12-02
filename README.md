@@ -58,3 +58,4 @@ This is an inference focused Fast Object Detection Application which uses latest
     
 ## References
 learnopencv.com
+pixabay.com
