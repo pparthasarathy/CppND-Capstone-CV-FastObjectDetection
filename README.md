@@ -4,7 +4,7 @@ Computer Vision: Deep Learning based Fast Object Detection using YOLOv3 with Ope
 ## Results of Running on Image and Video Files
 Image Output             |  Video Output
 :-------------------------:|:-------------------------:
-![Image Output](data/hotdogFork_output.jpg width = 400 height = 300)  |  ![Video Output](data/NYC_Junction_output.gif)
+![Image Output](data/hotdogFork_output.jpg)|  ![Video Output](data/NYC_Junction_output.gif)
 
 ## Dependencies for Running Locally
 * cmake >= 3.11.3
