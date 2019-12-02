@@ -1,8 +1,12 @@
 // This is the Capstone project for Udacity's C++ Nano Degree Program, based on the OpenCV project.
-// It is subject to the license terms in the LICENSE file at http://opencv.org/license.html
+// It is subject to the same license terms as found in the LICENSE file at http://opencv.org/license.html
 
-// Usage example:  ./object_detection_yolo.out --video=run.mp4
-//                 ./object_detection_yolo.out --image=bird.jpg
+// Usage example:  
+// Image Input:
+//    $./yolov3_object_detect --image=./data/hotdogFork.jpg
+// Video Input: 
+//    $./yolov3_object_detect --video=../data/NYC_Junction.mp4
+
 #include <fstream>
 #include <sstream>
 #include <iostream>
@@ -12,7 +16,7 @@
 #include <opencv2/highgui.hpp>
 
 const char* keys =
-"{help h usage ? | | Usage examples: \n\t\t./yolov3_object_detect --image=./data/hotdogFork.jpg \n\t\t./object_detection_yolo.out --video=./data/run_sm.mp4}"
+"{help h usage ? | | Usage examples: \n\t\t./yolov3_object_detect --image=./data/hotdogFork.jpg \n\t\t./yolov3_object_detect --video=../data/NYC_Junction.mp4}"
 "{image i        |<none>| input image   }"
 "{video v       |<none>| input video   }"
 ;
@@ -90,11 +94,10 @@ int main(int argc, char** argv)
             outputFile = str;
         }
         // Open the webcam
-        else cap.open(parser.get<int>("device"));
-        
+        else cap.open(parser.get<int>("device"));        
     }
     catch(...) {
-        cout << "Could not open the input image/video stream" << endl;
+        cout << "Unable to open the input image/video stream" << endl;
         return 0;
     }
     
@@ -104,7 +107,7 @@ int main(int argc, char** argv)
     }
     
     // Create a window
-    static const string kWinName = "Deep learning object detection in OpenCV";
+    static const string kWinName = "YOLOv3 based object detection in OpenCV";
     namedWindow(kWinName, WINDOW_NORMAL);
 
     // Process frames.
@@ -115,8 +118,8 @@ int main(int argc, char** argv)
 
         // Stop the program if reached end of video
         if (frame.empty()) {
-            cout << "Done processing !!!" << endl;
-            cout << "Output file is stored as " << outputFile << endl;
+            cout << "Completed object detection !!!" << endl;
+            cout << "Output saved to file: " << outputFile << endl;
             waitKey(3000);
             break;
         }
@@ -137,7 +140,7 @@ int main(int argc, char** argv)
         vector<double> layersTimes;
         double freq = getTickFrequency() / 1000;
         double t = net.getPerfProfile(layersTimes) / freq;
-        string label = format("Inference time for a frame : %.2f ms", t);
+        string label = format("Inference time: %.2f ms", t);
         putText(frame, label, Point(0, 15), FONT_HERSHEY_SIMPLEX, 0.5, Scalar(0, 0, 255));
         
         // Write the frame with the detection boxes
